@@ -1,0 +1,625 @@
+--html--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>GameHub</h1>
+            <nav>
+                <ul>
+                    <li><a href="#featured">Featured Games</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#news">Latest News</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h2>Your Ultimate Gaming Destination</h2>
+            <p>Discover new worlds, challenge your friends, and experience the thrill of gaming.</p>
+            <a href="#categories" class="btn">Explore Games</a>
+        </div>
+    </section>
+
+    <section id="featured" class="container">
+        <h2>Featured Games</h2>
+        <div class="game-list">
+            <div class="game-card">
+                <img src="https://via.placeholder.com/300x200/FF5733/FFFFFF?text=Epic+Adventure" alt="Epic Adventure Game">
+                <h3>Epic Adventure</h3>
+                <p>Embark on a grand quest across a vast fantasy world.</p>
+                <span class="rating">Rating: 4.5/5</span>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/300x200/33FF57/FFFFFF?text=Sci-Fi+Shooter" alt="Sci-Fi Shooter Game">
+                <h3>Sci-Fi Shooter</h3>
+                <p>Fast-paced action in a futuristic, intergalactic battlefield.</p>
+                <span class="rating">Rating: 4.2/5</span>
+            </div>
+            <div class="game-card">
+                <img src="https://via.placeholder.com/300x200/3357FF/FFFFFF?text=Puzzle+Master" alt="Puzzle Master Game">
+                <h3>Puzzle Master</h3>
+                <p>Test your wits with challenging and mind-bending puzzles.</p>
+                <span class="rating">Rating: 4.7/5</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories" class="container">
+        <h2>Game Categories</h2>
+        <div class="category-grid">
+            <div class="category-item">
+                <i class="fas fa-gamepad"></i>
+                <h3>Action</h3>
+            </div>
+            <div class="category-item">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Strategy</h3>
+            </div>
+            <div class="category-item">
+                <i class="fas fa-robot"></i>
+                <h3>RPG</h3>
+            </div>
+            <div class="category-item">
+                <i class="fas fa-puzzle-piece"></i>
+                <h3>Puzzle</h3>
+            </div>
+            <div class="category-item">
+                <i class="fas fa-running"></i>
+                <h3>Sports</h3>
+            </div>
+            <div class="category-item">
+                <i class="fas fa-racing-helmet"></i>
+                <h3>Racing</h3>
+            </div>
+        </div>
+    </section>
+
+    <section id="news" class="container">
+        <h2>Latest Gaming News</h2>
+        <div class="news-list">
+            <article class="news-item">
+                <h3>New AAA Title Announced!</h3>
+                <p>A major studio has revealed their next ambitious project, promising groundbreaking visuals and gameplay.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <h3>Esports Tournament Finals This Weekend</h3>
+                <p>Don't miss the thrilling conclusion of the global esports championship with top teams battling for victory.</p>
+                <a href="#">Read More</a>
+            </article>
+            <article class="news-item">
+                <h3>Indie Gem Gets Major Update</h3>
+                <p>A beloved indie game is receiving a significant content update, adding new levels and features.</p>
+                <a href="#">Read More</a>
+            </article>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>Get In Touch</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 GameHub. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+--html--
+
+--css--
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --dark-color: #343a40;
+    --light-color: #f8f9fa;
+    --accent-color: #ffc107;
+    --background-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-background: #2c2c2c;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+.btn {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* Header */
+header {
+    background-color: var(--dark-color);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--accent-color);
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header nav ul li {
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+header nav ul li a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+#hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://via.placeholder.com/1920x800/343a40/FFFFFF?text=Gaming+Wallpaper') no-repeat center center/cover;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color);
+}
+
+#hero h2 {
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    color: var(--accent-color);
+}
+
+#hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+/* Featured Games Section */
+#featured {
+    padding: 60px 0;
+}
+
+#featured h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.game-card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.game-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.game-card h3 {
+    font-size: 1.5em;
+    margin: 15px 15px 5px 15px;
+}
+
+.game-card p {
+    margin: 0 15px 15px 15px;
+    flex-grow: 1; /* Allows paragraph to take available space */
+    color: var(--secondary-color);
+}
+
+.game-card .rating {
+    display: block;
+    text-align: right;
+    margin: 0 15px 15px 15px;
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+/* Categories Section */
+#categories {
+    background-color: var(--card-background);
+    padding: 60px 0;
+}
+
+#categories h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.category-item {
+    background-color: var(--dark-color);
+    padding: 25px 15px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.category-item:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+.category-item i {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: var(--accent-color);
+}
+
+.category-item h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+/* News Section */
+#news {
+    padding: 60px 0;
+}
+
+#news h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.news-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news-item {
+    background-color: var(--card-background);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+.news-item h3 {
+    margin-top: 0;
+    font-size: 1.7em;
+    color: var(--accent-color);
+}
+
+.news-item p {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.news-item a {
+    font-weight: bold;
+}
+
+/* Contact Section */
+#contact {
+    background-color: var(--card-background);
+    padding: 60px 0;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+#contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: var(--dark-color);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+#contact-form button.btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-left: 15px;
+    font-size: 1.5em;
+    color: var(--secondary-color);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 15px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    header nav ul li {
+        margin: 5px 0;
+    }
+
+    #hero h2 {
+        font-size: 2.5em;
+    }
+
+    #hero p {
+        font-size: 1.2em;
+    }
+
+    .game-list, .news-list {
+        grid-template-columns: 1fr;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+    .social-links {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #hero h2 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    #contact-form {
+        padding: 25px;
+    }
+}
+--css--
+
+--js--
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('header nav ul li a');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+
+    // Form submission handling (simple example)
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        console.log('Form submitted:');
+        console.log('Name:', name);
+        console.log('Email:', email);
+        console.log('Message:', message);
+
+        // In a real application, you would send this data to a server
+        alert('Thank you for your message! We will get back to you soon.');
+        contactForm.reset(); // Clear the form
+    });
+
+    // Optional: Add subtle animations on scroll for elements
+    const animatedElements = document.querySelectorAll('.game-card, .news-item, .category-item');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            } else {
+                // Resetting might be needed if you want them to animate out,
+                // but for a simple fade-in on view, this is fine.
+                // entry.target.style.opacity = '0';
+                // entry.target.style.transform = 'translateY(20px)';
+            }
+        });
+    }, {
+        threshold: 0.1 // Trigger when 10% of the element is visible
+    });
+
+    animatedElements.forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(20px)';
+        el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+        observer.observe(el);
+    });
+});
+--js--
